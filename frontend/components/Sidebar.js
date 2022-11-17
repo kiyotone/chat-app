@@ -1,9 +1,9 @@
 import React from 'react'
 import {TbMessages} from 'react-icons/tb';
 import SidebarBtn from './SidebarBtn';
-import {BiMessageSquareCheck} from 'react-icons/bi'
-import {BiBlock} from 'react-icons/bi'
-import {RiSpam2Line} from 'react-icons/ri2'
+import {BiMessageSquareCheck} from 'react-icons/bi';
+import {BiBlock} from 'react-icons/bi';
+import {RiSpam2Line} from 'react-icons/ri'
 
 
 function Sidebar() {
@@ -23,7 +23,7 @@ function Sidebar() {
                     
         },
         {
-            title:"Spam",icon:<RiSpam3Line />
+            title:"Spam",icon:<RiSpam2Line />
         },
         
     ]
