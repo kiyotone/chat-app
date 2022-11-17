@@ -3,7 +3,7 @@ import {TbMessages} from 'react-icons/tb';
 import SidebarBtn from './SidebarBtn';
 import {BiMessageSquareCheck} from 'react-icons/bi'
 import {BiBlock} from 'react-icons/bi'
-import {RiSpam3Line} from 'react-icons/ri'
+import {RiSpam2Line} from 'react-icons/ri2'
 
 
 function Sidebar() {

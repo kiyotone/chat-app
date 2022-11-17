@@ -53,7 +53,7 @@ const Navbar = () => {
             navbtns.map((button)=>
 
                 (
-                  <NavBtn title={button.title} icon={button.icon}/>
+                  <NavBtn title={button.title} icon={button.icon} key={button.title}/>
                 )
 
             )
