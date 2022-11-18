@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import ContactList from '../components/ContactList'
+import MainBody from '../components/MainBody'
 
 export default function Home() {
   return (
@@ -17,9 +18,15 @@ export default function Home() {
       </Head>    
     
     <Navbar />
-    <Sidebar />
-    <ContactList />
-
+    <div className="flex ">
+          <div className="">
+            <Sidebar />
+          </div>
+          
+        <div className="pt-[.5rem]">
+          <MainBody />
+        </div>
+    </div>
 
     </div>
   )

@@ -29,12 +29,12 @@ function Sidebar() {
     ]
 
   return (
-    <div className="bg-black w-[16rem] h-screen">
+    <div className="bg-black w-[18rem] h-screen">
 
         <div className="flex flex-col items-center pt-5">
             {
                 sidebarButtons.map((btn)=>(
-                    <div className="pl-4 flex items-center w-[12rem] h-[4rem] text-gray-400 text-base hover:bg-yellow-200 rounded-3xl hover:text-black" key={btn.name+"d1"}>
+                    <div className="pl-4 flex items-center w-[12rem] h-[4rem] text-gray-400 text-base hover:bg-yellow-200 cursor-pointer rounded-3xl hover:text-black" key={btn.name+"d1"}>
                     <SidebarBtn title = {btn.title} icon = {btn.icon} />
                     </div>
                     ))
