@@ -18,12 +18,12 @@ export default function Home() {
       </Head>    
     
     <Navbar />
-    <div className="flex ">
+    <div className="flex">
           <div className="">
             <Sidebar />
           </div>
           
-        <div className="pt-[.5rem]">
+        <div className="pt-[.3rem] w-full">
           <MainBody />
         </div>
     </div>

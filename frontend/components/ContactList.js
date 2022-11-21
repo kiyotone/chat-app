@@ -18,19 +18,20 @@ function ContactList() {
     }
 
   return (
-    <div className="h-screen w-[18rem] items-center ">
+    <div className="h-screen w-[16rem] items-center">
 
 
-        <div className=" flex flex-col pt-6 items-center">
+        <div className="flex flex-col pt-6 items-center">
             <div className="relative flex items-center">
                 <input type="text" className="bg-[#16171b] pl-9 px-0 placeholder:text-gray-500 p-4 rounded-[1rem]" placeholder='Search'/>
                 <IoIosSearch className="absolute text-[19px] text-gray-500 ml-3" />
             </div>
         </div>
+        
         <div className="flex flex-col ml-4 mt-7">
             <div className="flex items-center justify-between text-[15px] text-gray-500">
              <p className="">Unread</p>
-            <div className="hover:bg-[#16171b] rounded-full"  onClick={toggleUnread}>
+            <div className="hover:bg-[#16171b] rounded-full mr-3"  onClick={toggleUnread}>
                     {
                     Unread ? <MdOutlineKeyboardArrowUp className="insert-y-0 right-0"/> : <MdOutlineKeyboardArrowDown className="insert-y-0 right-0"/>
                     }
@@ -51,7 +52,7 @@ function ContactList() {
 
         <div className="flex items-center ml-4 mt-7 justify-between text-[15px] text-gray-500">
             <p className="">All Messages</p>
-            <div className="hover:bg-[#16171b] rounded-full"  onClick={toggleAll}>
+            <div className="hover:bg-[#16171b] rounded-full mr-3"  onClick={toggleAll}>
             {
                     All ? <MdOutlineKeyboardArrowUp className="insert-y-0 right-0"/> : <MdOutlineKeyboardArrowDown className="insert-y-0 right-0"/>
             }
