@@ -41,7 +41,7 @@ function ContactList() {
 
         Unread &&
         (   
-            <div className="translate-y-0 ease-in-out delay-150 duration-200"> 
+            <div className="translate-y-0 mt-3 ease-in-out delay-150 duration-200"> 
             <MessageBar name = {"Kirtan Kunwar"} content = {"Chak is gu"} />
             <MessageBar name = {"Hane"} content = {"I only know what i know"} />
             </div>

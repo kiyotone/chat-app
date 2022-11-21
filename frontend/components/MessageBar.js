@@ -5,7 +5,7 @@ import Image from 'next/image';
 function MessageBar({name,content}) {
     
     return (
-    <div className="flex h-[100px] mt-3 hover:bg-black">
+    <div className="flex pl-2 items-center h-[70px] hover:bg-[#16171b] cursor-pointer rounded-xl">
         <div className="flex pl">
             <Image src={hane} className="rounded-full w-[3rem] h-[3rem] object-cover" />
 
