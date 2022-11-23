@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import MessageBlob from './MessageBlob'
+import { useMessages } from './MessageContext'
 
-function ChatHistory({messages}) {
- 
+function ChatHistory() {
+  const {messages} = useMessages();
+
   return (
-    <div className="" >
-{
+    <div className="">
+{messages &&
   messages.map((message)=>{
     return (
       <MessageBlob message={message} user="ChatPerson"/>
