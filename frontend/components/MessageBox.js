@@ -18,12 +18,13 @@ function MessageBox() {
   }
 
   const addMessage = () =>{
+    if (messageTyped != ""){
     const temp = {
-      content: messageTyped,
-      sender : "ChatPerson"
-    }
-    dispatch({type:"add",payload:temp})
-    
+        content: messageTyped,
+        sender : "ChatPerson"
+      }
+      dispatch({type:"add",payload:temp})
+      }
   }
 
   return (
@@ -36,7 +37,7 @@ function MessageBox() {
                 <TiAttachment />              
               </div>
 
-              <div className="flex items-center w-[20px] h-[20px] bg-yellow-200 rounded" onClick={addMessage}>
+              <div className="flex items-center w-[20px] h-[20px] bg-yellow-200 rounded hover:cursor-pointer" onClick={addMessage}>
                 
                   <IoSend className="ml-[3px] text-[15px]"/>
                 
