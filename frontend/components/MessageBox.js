@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import {IoSend} from 'react-icons/io5'
 import {BiImageAlt} from 'react-icons/bi'
 import {TiAttachment} from 'react-icons/ti'
@@ -13,6 +13,7 @@ function MessageBox() {
 
     if (e.keyCode ==13){
       addMessage()
+      e.target.value = "";
     }
     
   }
@@ -23,8 +24,37 @@ function MessageBox() {
         content: messageTyped,
         sender : "ChatPerson"
       }
+
+
       dispatch({type:"add",payload:temp})
+      changeTyped("");
+      getResponse(temp);  
+
+    } 
+
+  }
+
+  async function getResponse(data_response){
+
+    try {
+      console.log(data_response)
+      const response = await fetch('http://127.0.0.1:8000/bot/post',{
+      
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data_response)
       }
+      );
+
+      const data = await response.json();
+      console.log(data);
+      dispatch({type:"add",payload:data.data});
+    }
+    catch (error) {
+      console.log(error);
+    }
   }
 
   return (

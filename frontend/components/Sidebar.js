@@ -4,6 +4,7 @@ import SidebarBtn from './SidebarBtn';
 import {BiMessageSquareCheck} from 'react-icons/bi';
 import {BiBlock} from 'react-icons/bi';
 import {RiSpam2Line} from 'react-icons/ri'
+import {GrRobot} from 'react-icons/gr';
 
 
 function Sidebar() {
@@ -25,6 +26,10 @@ function Sidebar() {
         {
             title:"Spam",icon:<RiSpam2Line />
         },
+        {
+            title:"Bot",icon:<GrRobot />
+        },
+
         
     ]
 

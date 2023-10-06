@@ -1,8 +1,7 @@
 import React from 'react'
 
 function MessageBlob({message,user}) {
-    console.log(message.sender);
-    console.log(user);
+    
     
     return (
         <div className="w-full">
