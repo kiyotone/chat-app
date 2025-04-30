@@ -1,0 +1,37 @@
+import { api } from "../config";
+
+export const login = async (username, password) => {
+    const data = JSON.stringify({
+      username: username,
+      password: password,
+    });
+    console.log(data);
+    try {
+      const response = await api.post("api/auth/login/", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      localStorage.setItem("token", response.data.access_token);
+      return response;
+    } catch (error) {
+      return error.response;
+    }
+  };
+  
+
+export const signup = async (data) => {
+    data = JSON.stringify(data);
+    console.log(data);
+    try {
+        const response = await api.post("auth/signup", data, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+    
+        });
+        return response;
+    } catch (error) {
+        return error.response;
+    }
+    }
