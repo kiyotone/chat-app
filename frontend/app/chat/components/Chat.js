@@ -10,7 +10,12 @@ function Chat() {
   const [socket, setSocket] = React.useState(null);
 
   useEffect(() => {
+    // do if once when the component mounts
+    
+
     const websocket = new WebSocket(wsUrl);
+
+    
 
     websocket.onopen = () => {
       console.log("WebSocket connection established.");
