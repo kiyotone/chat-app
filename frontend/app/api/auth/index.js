@@ -35,3 +35,17 @@ export const signup = async (data) => {
         return error.response;
     }
     }
+
+  export const logout = async () => {
+    try {
+        const response = await api.post("auth/logout", {}, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        localStorage.removeItem("token");
+        return response;
+    } catch (error) {
+        return error.response;
+    }
+  }

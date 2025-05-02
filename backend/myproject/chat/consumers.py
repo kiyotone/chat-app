@@ -15,6 +15,9 @@ class ChatConsumer(WebsocketConsumer):
         self.user = self.scope['user']
         self.chatroom_name = self.scope['url_route']['kwargs']['room_name']
         self.chatroom = get_object_or_404(ChatGroup, name=self.chatroom_name)
+        
+        # Display Connected Users
+        print(f"Connected users in {self.chatroom_name}: {connected_users.get(self.chatroom_name, set())}")
 
         # Initialize room in tracker if it doesn't exist
         if self.chatroom_name not in connected_users:

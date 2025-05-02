@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 import json
+from django.contrib.auth import logout
 
 
 # Signup View
@@ -45,5 +46,16 @@ def show_all_users(request):
     if request.method == 'GET':
         users = User.objects.all().values('username', 'email')
         return JsonResponse(list(users), safe=False, status=200)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+    
+    
+from django.contrib.auth import logout
+
+@csrf_exempt  # Disable CSRF protection for this view if needed
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return JsonResponse({'message': 'Logged out successfully'}, status=200)
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)

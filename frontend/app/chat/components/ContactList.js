@@ -50,7 +50,7 @@ function ContactList() {
         </div>
         {Unread && (
           <div className="translate-y-0 mt-3 ease-in-out delay-150 duration-200">
-            <MessageBar name={"Kirtan Kunwar"} content={"Chak is gu"} />
+            <MessageBar name={"TEST USER"} content={"TO BE COMPLETE"} />
             <MessageBar name={"Hane"} content={"I only know what i know"} />
           </div>
         )}
